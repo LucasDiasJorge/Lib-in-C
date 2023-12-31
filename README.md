@@ -99,4 +99,6 @@ O uso adequado de arquivos de cabeçalho, a prática da modularização e o ente
 ## Doc and refs
 
 _[How to create a lib](https://www.youtube.com/watch?v=x8gsHFBW7zY)_ <br>
-_[Header files](https://www.youtube.com/watch?v=NeOTr0u7ALk)_
+_[Header files](https://www.youtube.com/watch?v=NeOTr0u7ALk)_ <br>
+_[C Project multi files](https://www.youtube.com/watch?v=bHA_pavoVG8)_
+
