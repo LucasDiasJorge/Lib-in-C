@@ -92,6 +92,52 @@ gcc -E exemplo.c -o exemplo.h
 
 Neste exemplo, o GCC está sendo usado com a opção -E para realizar apenas a fase de pré-processamento no arquivo exemplo.c. O resultado é então redirecionado para um arquivo chamado exemplo.h. No entanto, note que este é um processo simples de geração e o arquivo resultante (exemplo.h) pode conter diretivas de pré-processador, inclusões de cabeçalho e outras coisas que normalmente são removidas durante a compilação.
 
+### 6.2 Comando para compilar usando o arquivo de cabeçalho (exemplo.h):
+
+#### Arquivo exemplo.c
+
+```c
+// exemplo.c
+#include <stdio.h>
+
+void funcaoExemplo() {
+    printf("Olá, isso é um exemplo!\n");
+}
+
+```
+
+#### Arquivo exemplo.h
+
+```c
+//Guarda de Inclusão Múltipla
+#ifndef EXEMPLO_H 
+#define EXEMPLO_H
+
+// Declaração de funções
+void funcaoExemplo();
+#endfi
+```
+
+#### Arquivo main.c
+
+```c
+// main.c
+#include "exemplo.h"
+
+int main(){
+    funcaoExemplo();
+    return 0;
+}
+```
+
+#### Compilando o arquivo main.c com a exemplo.h
+
+
+```sh
+    gcc main.c exemplo.c  
+```
+
+
 ### 7. Conclusão:
 
 O uso adequado de arquivos de cabeçalho, a prática da modularização e o entendimento do processo de compilação são fundamentais para o desenvolvimento eficiente e sustentável de programas em C. Ao organizar o código de forma modular, você torna seu projeto mais escalável, legível e fácil de manter.
@@ -100,5 +146,6 @@ O uso adequado de arquivos de cabeçalho, a prática da modularização e o ente
 
 _[How to create a lib](https://www.youtube.com/watch?v=x8gsHFBW7zY)_ <br>
 _[Header files](https://www.youtube.com/watch?v=NeOTr0u7ALk)_ <br>
-_[C Project multi files](https://www.youtube.com/watch?v=bHA_pavoVG8)_
+_[C Project multi files](https://www.youtube.com/watch?v=bHA_pavoVG8)_ <br>
+_[C own lib compile](https://stackoverflow.com/questions/18355493/compiling-my-c-program-with-my-customized-library-h-using-linux)_
 
